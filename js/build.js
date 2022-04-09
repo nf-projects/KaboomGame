@@ -2688,7 +2688,8 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
     sprite("bean"),
     pos(80, 40),
     area(),
-    body()
+    body(),
+    scale(0.25)
   ]);
   keyPress("space", () => {
     player.jump();

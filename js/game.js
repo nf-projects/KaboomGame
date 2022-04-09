@@ -13,6 +13,7 @@ const player = add([
     pos(80, 40), // position of the sprite
     area(), // makes it collidable
     body(), // makes it a physics body
+    scale(0.25), // scale the sprite
 ]);
 
 keyPress("space", () => {
