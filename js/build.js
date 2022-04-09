@@ -2685,6 +2685,7 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
   no();
   loadSprite("birdy", "https://i.ibb.co/sR8xGth/Flappy-Bird-Logo-PNG-Pic.png");
   loadSprite("bg", "https://i.ibb.co/zsH9nJQ/46888871-624a3900-ce7f-11e8-808e-99fd90c8a3f4.png");
+  loadSprite("pipe", "https://i.ibb.co/R9z0LkX/pipeDown.png");
   add([
     sprite("bg", { width: width(), height: height() })
   ]);
@@ -2694,6 +2695,17 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
     area(),
     body(),
     scale(0.25)
+  ]);
+  add([
+    sprite("pipe"),
+    pos(width() / 2, 0),
+    scale(0.6)
+  ]);
+  add([
+    sprite("pipe", { flipY: true }),
+    pos(width() / 2, height()),
+    scale(0.6),
+    origin("botleft")
   ]);
   keyPress("space", () => {
     player.jump();
