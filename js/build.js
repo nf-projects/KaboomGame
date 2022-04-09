@@ -2683,7 +2683,7 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
 
   // js/game.js
   no();
-  loadSprite("bean", "https://i.ibb.co/VWyLFXn/bean-1.png");
+  loadSprite("bean", "https://i.ibb.co/sR8xGth/Flappy-Bird-Logo-PNG-Pic.png");
   var player = add([
     sprite("bean"),
     pos(80, 40),

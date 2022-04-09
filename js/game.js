@@ -4,7 +4,7 @@ import kaboom from "kaboom";
 kaboom()
 
 // load assets
-loadSprite("bean", "https://i.ibb.co/VWyLFXn/bean-1.png");
+loadSprite("bean", "https://i.ibb.co/sR8xGth/Flappy-Bird-Logo-PNG-Pic.png");
 
 // add a game object to screen
 const player = add([
