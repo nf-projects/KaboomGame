@@ -1,21 +1,21 @@
 import kaboom from "kaboom";
 
-// start the game
+// initialize context
 kaboom()
 
-// load a default sprite
-loadBean()
+// load assets
+loadSprite("bean", "https://i.ibb.co/VWyLFXn/bean-1.png");
 
-// add character to screen, from a list of components
+// add a game object to screen
 const player = add([
-    sprite("bean"),  // renders as a sprite
-    pos(120, 80),    // position in world
-    area(),          // has a collider
-    body(),          // responds to physics and gravity
-])
+    // list of components
+    sprite("bean"), // the sprite image
+    pos(80, 40), // position of the sprite
+    area(), // makes it collidable
+    body(), // makes it a physics body
+]);
 
-// jump when player presses "space" key
-onKeyPress("space", () => {
-    // .jump() is provided by the body() component
-    player.jump()
-})
+keyPress("space", () => {
+    // debug.log("space pressed!"); // logs to the console
+    player.jump();
+});

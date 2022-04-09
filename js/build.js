@@ -2683,14 +2683,14 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
 
   // js/game.js
   no();
-  loadBean();
+  loadSprite("bean", "https://i.ibb.co/VWyLFXn/bean-1.png");
   var player = add([
     sprite("bean"),
-    pos(120, 80),
+    pos(80, 40),
     area(),
     body()
   ]);
-  onKeyPress("space", () => {
+  keyPress("space", () => {
     player.jump();
   });
 })();
